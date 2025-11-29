@@ -18,11 +18,28 @@ html {
 .sidebar {
   display: grid;
   row-gap: 2em;
+  column-gap: 0.2em;
   grid-template-rows: 1fr 5fr 3fr 5fr;
   grid-template-columns: 1fr 4fr;
 
   background-color: rgb(149, 186, 255);
   padding: 1em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.dashboard-link {
+  font-size: 1.4em;
+}
+.dashboard-icon {
+  width: 80%;
+  justify-self: center;
+}
+
+.icon {
+  width: 40%;
+  justify-self: center;
 }
 
 .main-links, .dashboard-link, .other-links {
@@ -31,6 +48,7 @@ html {
   display: grid;
   row-gap: 0.5em;
   grid-template-columns: subgrid;
+  align-items: center;
 }
 
 .right-part {
