@@ -33,12 +33,12 @@ html {
   font-size: 1.4em;
 }
 .dashboard-icon {
-  width: 80%;
+  width: 1.4em;
   justify-self: center;
 }
 
 .icon {
-  width: 40%;
+  width: 1em;
   justify-self: center;
 }
 
@@ -60,6 +60,35 @@ html {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr;
+
+  padding: 0 2em;
+}
+
+.top-left {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+input {
+  flex: 1;
+}
+
+.top-right {
+  /* place-self: center end; */
+
+  display: flex;
+  gap: 1em;
+  justify-content: end;
+  align-items: center;
+
+  font-weight: bold;
+}
+
+.top-user-icon {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background-color: yellow;
 }
 
 .main-content {
