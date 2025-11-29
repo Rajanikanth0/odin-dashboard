@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-family: sans-serif;
+}
 
 .container {
   width: 90em;
@@ -17,9 +20,12 @@
   row-gap: 2em;
   grid-template-rows: 1fr 5fr 3fr 5fr;
   grid-template-columns: 1fr 4fr;
+
+  background-color: rgb(149, 186, 255);
+  padding: 1em;
 }
 
-.main-links, .dashboard, .other-links {
+.main-links, .dashboard-link, .other-links {
   grid-column: span 2;
 
   display: grid;
