@@ -3,3 +3,26 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.container {
+  width: 90em;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.sidebar {
+  display: grid;
+  row-gap: 2em;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr 3fr 5fr;
+}
+
+.main-links, .dashboard, .other-links {
+  grid-column: span 2;
+
+  display: grid;
+  row-gap: 0.5em;
+  grid-template-columns: subgrid;
+}
