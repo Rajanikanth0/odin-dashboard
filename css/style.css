@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --theme-color: rgb(63, 110, 198);
+  --size-4: 1.4em;
+  --size-3: 1.3em;
+  --size-2: 1.2em;
+  --size-1: 1.1em;
+}
 html {
   font-family: sans-serif;
 }
@@ -13,24 +20,27 @@ html {
 
   display: grid;
   grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 4fr;
 }
 
 .sidebar {
+  grid-row: span 2;
+
   display: grid;
   row-gap: 2em;
   column-gap: 0.2em;
-  grid-template-rows: 1fr 5fr 3fr 5fr;
+  grid-template-rows: 2fr 5fr 3fr 5fr;
   grid-template-columns: 1fr 4fr;
 
-  background-color: rgb(63, 110, 198);
-  padding: 1em;
+  background-color: var(--theme-color);
+  /* padding: 1em; */
   color: white;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: var(--size-3);
 }
 
 .dashboard-link {
-  font-size: 1.4em;
+  font-size: var(--size-4);
 }
 .dashboard-icon {
   width: 1.4em;
@@ -53,7 +63,7 @@ html {
 
 .right-part {
   display: grid;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 4fr;
 }
 
 .header {
@@ -70,15 +80,27 @@ html {
   gap: 1em;
   align-items: center;
 }
+.top-left svg, .top-right svg {
+  width: 1.2em;
+}
 input {
   flex: 1;
+
+  font-size: inherit;
+  border: none;
+  background-color: rgb(229, 231, 238);
+  padding: 0.4em 0.8em;
+  border-radius: 1em;
+}
+input:focus {
+  outline: thin solid var(--theme-color);
 }
 
 .top-right {
   /* place-self: center end; */
 
   display: flex;
-  gap: 1em;
+  gap: 2em;
   justify-content: end;
   align-items: center;
 
@@ -89,7 +111,10 @@ input {
   width: 2em;
   height: 2em;
   border-radius: 50%;
-  background-color: gray;
+  background-color: var(--theme-color);
+}
+.top-user-name {
+  font-size: var(--size-2);
 }
 
 .bottom-left {
@@ -103,13 +128,13 @@ input {
   width: 3em;
   height: 3em;
   border-radius: 50%;
-  background-color: gray;
+  background-color: var(--theme-color);
 }
 .greetings {
   font-size: 0.8em;
 }
 .bottom-user-name {
-  font-size: 1.2em;
+  font-size: var(--size-4);
 }
 
 .bottom-right {
@@ -124,7 +149,7 @@ input {
   padding: 0.6em 1.5em;
   color: white;
   font-weight: bold;
-  background-color: rgb(63, 110, 198);
+  background-color: var(--theme-color);
 }
 
 .main-content {
