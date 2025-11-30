@@ -22,7 +22,7 @@ html {
   grid-template-rows: 1fr 5fr 3fr 5fr;
   grid-template-columns: 1fr 4fr;
 
-  background-color: rgb(149, 186, 255);
+  background-color: rgb(63, 110, 198);
   padding: 1em;
   color: white;
   font-weight: bold;
@@ -58,6 +58,7 @@ html {
 
 .header {
   display: grid;
+  column-gap: 2em;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 2fr 1fr;
 
@@ -88,7 +89,42 @@ input {
   width: 2em;
   height: 2em;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: gray;
+}
+
+.bottom-left {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  font-weight: bold;
+}
+
+.bottom-user-icon {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  background-color: gray;
+}
+.greetings {
+  font-size: 0.8em;
+}
+.bottom-user-name {
+  font-size: 1.2em;
+}
+
+.bottom-right {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  justify-content: end;
+}
+.user-buttons {
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.6em 1.5em;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(63, 110, 198);
 }
 
 .main-content {
