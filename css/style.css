@@ -31,7 +31,6 @@ svg {
 
 .container {
   width: 60rem;
-  /* height: 100vh; */
   margin: 0 auto;
 
   display: grid;
@@ -76,7 +75,7 @@ svg {
 
 .right-part {
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
 }
 
 .header {
@@ -135,7 +134,7 @@ svg {
 .content {
   display: grid;
   grid-template-rows: 1fr 4fr 1fr 4fr;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2.5fr 1fr;
 
   padding: 1.5rem 1rem;
   padding-top: 0;
@@ -151,10 +150,28 @@ svg {
 .cards {
   grid-row: span 3;
 
-  font-size: 10px;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.cards > .card {
+  border-left: thick solid rgb(255, 125, 125);
+  
+  display: grid;
+  grid-template-rows: 1.2rem 1fr 1.2rem;
+}
+.review {
+  justify-self: end;
+}
+
+.card p:first-child {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.card p:last-child {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: rgb(104, 104, 104);
 }
 
 .bottom-user-name {
@@ -168,4 +185,36 @@ button {
   font-weight: bold;
   padding: 0.3rem 1rem;
   border-radius: 0.5rem;
+}
+
+.side-card-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-evenly;
+}
+
+.side-card-1 p:first-child, .side-card-2 p:first-child {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.side-card-1 p:last-child {
+  font-size: 0.5rem;
+}
+.side-card-2 p:last-child {
+  font-size: 0.7rem;
+}
+
+.side-card-2 {
+  display: grid;
+  align-items: center;
+  gap: 1rem 0.5rem;
+  grid-template-columns: 1fr 3fr;
+}
+
+.users-icon {
+  width: 2rem;
+  height: 2rem;
+  background-color: orange;
+  border-radius: 50%;
 }
