@@ -5,12 +5,15 @@
 }
 html {
   font-family: sans-serif;
+  font-size: clamp(0.7rem, calc(0.2rem + 1vw), 1.5rem);
 }
 :root {
   --size-1: 1.1rem;
   --size-2: 1.2rem;
   --size-3: 1.3rem;
   --size-4: 1.4rem;
+
+  --theme-color: orange;
 }
 /* remove this after testing */
 svg {
@@ -18,6 +21,10 @@ svg {
 }
 
 .container {
+  width: 60rem;
+  /* height: 100vh; */
+  margin: 0 auto;
+
   display: grid;
   grid-template-columns: 1fr 3.5fr;
 }
@@ -26,9 +33,12 @@ svg {
   display: grid;
   grid-template-rows: max-content 2fr 1fr 2.5fr;
   grid-template-columns: max-content 1fr;
-
   row-gap: 2.8rem;
+
   padding: 1rem;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
 }
 
 .sidebar > .top, .mid, .bottom {
@@ -98,6 +108,15 @@ svg {
 
 .header input {
   flex: 1;
+
+  font: inherit;
+  border: none;
+  background-color: rgb(243, 237, 226);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+}
+.header input:focus {
+  outline: medium solid var(--theme-color);
 }
 
 /* Content */
